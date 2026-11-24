@@ -1,0 +1,21 @@
+{
+  "dibuat": "2026-11-24T14:49:45",
+  "oleh": "Francesco Nera Alfi Nanggor / 2501010174",
+  "sumber": [
+    "berkas: data/raw/Table-1-7-Final-5.xls (https://cloud-ng.baliprov.go.id/disparda/2026/04/Table-1-7-Final-5.xls)",
+    "API: Open-Meteo",
+    "scraping: tidak dipakai (tidak ada tabel statis yang lolos)"
+  ],
+  "kunci_merge": "kunci_wilayah (nama kabupaten/kota ternormalisasi)",
+  "tipe_merge": "inner, validate=one_to_one",
+  "jumlah_baris": 1,
+  "kolom": [
+    "kunci_wilayah",
+    "wilayah_berkas",
+    "indikator_pariwisata",
+    "suhu_rata2_C",
+    "hujan_total_mm",
+    "hari_hujan"
+  ],
+  "md5_gabungan_csv": "7688d2fc6c8247af95bd3440aa3b2757"
+}
