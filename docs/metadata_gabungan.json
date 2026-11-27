@@ -1,0 +1,57 @@
+{
+  "dibuat": "2026-11-27T07:18:05",
+  "oleh": "Francesco Nera Alfi Nanggor / 2501010174",
+  "sumber": [
+    {
+      "jenis": "Dataset berkas",
+      "nama": "Dinas Pariwisata Provinsi Bali - Statistik Pariwisata Bali 2025",
+      "url": "https://cloud-ng.baliprov.go.id/disparda/2026/04/Table-24-31-Final-5.xls",
+      "berkas": "Table-24-31-Final-5 (1).xls",
+      "lisensi_ketentuan": "Hak cipta Pemerintah Provinsi Bali; dilarang mereproduksi/menggandakan isi buku untuk tujuan komersial tanpa izin tertulis. Dipakai non-komersial untuk tugas kuliah dengan mencantumkan sumber."
+    },
+    {
+      "jenis": "API",
+      "nama": "Open-Meteo Archive API",
+      "url": "https://archive-api.open-meteo.com/v1/archive",
+      "lisensi": "CC BY 4.0",
+      "periode": "2025-01-01 s.d. 2025-12-31"
+    },
+    {
+      "jenis": "Scraping",
+      "nama": "Dinas Pariwisata Provinsi Bali",
+      "url": "https://disparda.baliprov.go.id/data-statistik",
+      "lisensi_ketentuan": "Tidak ditemukan keterangan lisensi terbuka pada halaman. Ketentuan penggunaan mengikuti portal sumber.",
+      "berkas_html": "data/raw/halaman_data_statistik_disparda.html"
+    }
+  ],
+  "indikator_pariwisata": {
+    "tabel": "TAB 24ok",
+    "judul": "RESTAURANT/RUMAH MAKAN IN BALI BY REGENCY IN 2020 - 2024",
+    "kolom": "RESTORAN/RUMAH MAKAN DI PROVINSI BALI PER KABUPATEN/KOTA TAHUN 2020- 2024 | 2020 | RESTAURANT/ | RUMAH MAKAN",
+    "satuan": "tidak tercantum pada judul tabel"
+  },
+  "data_pendukung_scraping": {
+    "file_csv": "Process/listing_statistik_pariwisata.csv",
+    "file_json": "Process/listing_statistik_pariwisata.json",
+    "jumlah_listing": 28,
+    "keterangan": "Daftar tautan informasi portal resmi; digunakan sebagai data pendukung/provenance, bukan variabel numerik merge."
+  },
+  "kunci_merge": "kunci_wilayah (nama kabupaten/kota ternormalisasi)",
+  "tipe_merge": "left: data Disparda sebagai tabel utama ditambah ringkasan cuaca Open-Meteo; validate=one_to_one",
+  "validasi": {
+    "kunci_disparda_unik": true,
+    "kunci_cuaca_unik": true,
+    "jumlah_baris_hasil_sama_dengan_disparda": true,
+    "wilayah_tanpa_data_cuaca": 0
+  },
+  "jumlah_baris": 9,
+  "jumlah_wilayah": 9,
+  "kolom": [
+    "indikator_pariwisata",
+    "kunci_wilayah",
+    "suhu_rata2_C",
+    "hujan_total_mm",
+    "hari_hujan"
+  ],
+  "md5_gabungan_csv": "15e26e29958f119522d77628fb02c192"
+}

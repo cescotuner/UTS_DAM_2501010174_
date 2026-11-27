@@ -1,0 +1,10 @@
+Aspek,Status (Ya/Tidak/NA),Bukti / Catatan
+Sumber data dan URL dicantumkan,Ya,docs/provenance.csv memuat 3 sumber. Berkas: https://cloud-ng.baliprov.go.id/disparda/2026/04/Table-24-31-Final-5.xls; API: archive-api.open-meteo.com; scraping: lihat docs/robots_check.json dan docs/scraping_meta.json
+Lisensi data diperiksa dan dicatat,Ya,Dataset: Hak cipta Pemerintah Provinsi Bali; dilarang mereproduksi/menggandakan isi buku untuk tujuan komersial tanpa izin tertulis. Dipakai non-komersial untuk tugas kuliah dengan mencantumkan sumber. | Open-Meteo: CC BY 4.0 (atribusi) | Situs scraping: lihat docs/robots_check.json dan docs/scraping_meta.json.
+robots.txt / Terms of Service diperiksa,Ya,"docs/robots_check_dataset.json (portal dataset) dan docs/robots_check.json (halaman scraping) berisi status robots.txt, hasil can_fetch, crawl-delay; User-Agent berisi email kampus"
+Kolom PII diidentifikasi,Ya,"docs/klasifikasi_pii.csv; pemindaian pola email/telepon/NIK pada seluruh sel berkas: {'email': 0, 'telepon': 0, 'nik': 2}"
+"PII dihapus, di-mask, atau di-pseudonimisasi",Ya,"Sel berpola PII tidak dibawa ke tabel long (hanya wilayah, label, angka); assert pola PII = 0 lolos; fungsi mask_pii tersedia"
+Prinsip minimalisasi data diterapkan,Ya,"Minimalisasi: tabel analisis hanya wilayah, indikator, dan nilai; API hanya tanggal, suhu rata-rata, dan curah hujan; scraping hanya judul dan URL tautan."
+Potensi bias sampel dianalisis,Ya,"Bias/keterbatasan: cakupan kabupaten/kota yang berhasil terdeteksi pada berkas; data resmi tidak mewakili seluruh usaha informal; cuaca diambil pada titik koordinat ibu kota, bukan rata-rata seluruh wilayah; periode data mengikuti label pada sumber."
+Tujuan penggunaan data dinyatakan eksplisit,Ya,Tujuan: tugas UTS - menganalisis hubungan indikator pariwisata dengan kondisi wilayah dan cuaca; tidak komersial dan tidak untuk profiling individu
+Rencana retensi dan penghapusan data ada,Ya,Data mentah disimpan selama semester berjalan (sampai nilai final) lalu dihapus dari repo dan perangkat; hasil gabungan agregat boleh diarsipkan

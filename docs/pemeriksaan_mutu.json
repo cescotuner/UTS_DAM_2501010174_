@@ -1,0 +1,10 @@
+{
+  "jumlah_baris_gabungan": 9,
+  "jumlah_wilayah": 9,
+  "kunci_wilayah_unik": true,
+  "tidak_ada_kunci_kosong": true,
+  "jumlah_wilayah_tanpa_cuaca": 0,
+  "csv_tersimpan": true,
+  "json_tersimpan": true,
+  "html_tersimpan": true
+}
